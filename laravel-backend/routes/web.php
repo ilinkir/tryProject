@@ -19,3 +19,10 @@ Route::get('/', function () {
 Route::get('/ajax/test/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'ajax'], function () {
+//    Route::get('/test',[\App\Http\Controllers\TestController::class, 'index']);
+    Route::controller(\App\Http\Controllers\TestController::class)->group(function () {
+        Route::get('/test', 'index');
+    });
+});
