@@ -15,8 +15,6 @@ class TestController extends Controller
 //            'password' => '123',
 //            'email' => 'test@test.ru',
 //        ]);
-
-        $user = User::query()->where('name', 'test')->get();
-        dd($user);
+        dd(123);
     }
 }
