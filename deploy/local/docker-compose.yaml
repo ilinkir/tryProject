@@ -1,0 +1,72 @@
+version: '3'
+
+services:
+  nginx:
+    build: ../../nginx
+    networks:
+      project:
+        aliases:
+          - nginx
+    ports:
+      - 80:80
+#      - ${PUB_HTTPS_PORT}:443
+#    volumes:
+#      - ./docker/nginx/ssl:/etc/nginx/ssl #for SSL
+  laravel-backend:
+    build:
+      context: ../../laravel-backend
+      dockerfile: ./docker/Dockerfile
+      args:
+        build_env: devel
+    networks:
+      project:
+        aliases:
+          - laravel-backend
+    environment:
+      XDEBUG_PORT: 9000
+      XDEBUG_HOST: 127.0.0.1
+      XDEBUG_IDKEY: DEFKEY
+    volumes:
+      - ../../laravel-backend:/var/www
+  nuxt-frontend:
+    build:
+      context: ../../nuxt-frontend
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 24678:24678 #For websocket
+    networks:
+      project:
+        aliases:
+          - nuxt-frontend
+          - frontend
+    volumes:
+      - ../../nuxt-frontend:/var/www
+  # PostgreSQL database container
+  postgres:
+    image: 'postgres'
+    volumes:
+      # Database volume
+      - database:/var/lib/postgresql/data
+      # Temp volume to allow using dumps
+      - ./docker/dev/postgres/dumps/:/tmp/
+    ports:
+      - 54321:5432
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=app
+  redis:
+    image: 'redis'
+    volumes:
+      - ./storage/redis/data:/data
+    ports:
+      - 6379:6379
+volumes:
+  database:
+    driver: local
+  redis:
+    driver: local
+
+networks:
+  project:
