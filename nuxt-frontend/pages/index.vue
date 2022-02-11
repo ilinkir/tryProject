@@ -19,10 +19,22 @@
       </div>
     </div>
     <NuxtLink to="/news">
-      <TButton>About</TButton>
+      About
     </NuxtLink>
+    <div>Store Pinia {{ store.name }}</div>
   </div>
 </template>
+
+<script>
+import { useStore } from '@/store/example.ts'
+export default {
+  data() {
+    return {
+      store: useStore()
+    }
+  },
+}
+</script>
 
 <style lang="postcss" scoped>
 .badge {
