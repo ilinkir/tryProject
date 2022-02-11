@@ -20,5 +20,4 @@ export default defineNuxtConfig({
     },
     // Restart server when these change
     watch: ['~/postcss.config.js', '~/tailwind.config.js'],
-        // Axios options here
 })

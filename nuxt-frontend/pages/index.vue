@@ -18,7 +18,7 @@
         <span class="badge">#winter</span>
       </div>
     </div>
-    <NuxtLink to="about">
+    <NuxtLink to="/news">
       <TButton>About</TButton>
     </NuxtLink>
   </div>

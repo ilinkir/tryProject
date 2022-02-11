@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::prefix('news')->group(function () {
+    Route::controller(\App\Http\Controllers\News\NewsController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{code}', 'detail');
+        Route::get('/more', 'more');
+    });
+});

@@ -15,6 +15,5 @@ class TestController extends Controller
 //            'password' => '123',
 //            'email' => 'test@test.ru',
 //        ]);
-        dd(123);
     }
 }
