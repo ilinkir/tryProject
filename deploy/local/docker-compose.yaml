@@ -70,6 +70,21 @@ services:
       project:
         aliases:
           - redis
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    container_name: elasticsearch-projectv3
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+    #    volumes:
+    #      - ./../elastic/data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      project:
+        aliases:
+          - elasticsearch
 volumes:
   database:
     driver: local

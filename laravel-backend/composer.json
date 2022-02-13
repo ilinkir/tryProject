@@ -11,7 +11,8 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.11",
         "laravel/telescope": "^4.7",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "ilin/elasticsearch-query-builder": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.12",
@@ -61,5 +62,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/kirik.ilyin/elasticsearch-query-builder.git"
+        }
+    ]
 }
