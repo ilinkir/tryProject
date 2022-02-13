@@ -5,6 +5,9 @@ build:
 up:
 	docker-compose -f deploy/local/docker-compose.yaml up -d
 
+stop:
+	docker-compose -f deploy/local/docker-compose.yaml stop
+
 prepare-nginx:
 	docker-compose -f deploy/local/docker-compose.yaml up -d --no-deps --build nginx
 

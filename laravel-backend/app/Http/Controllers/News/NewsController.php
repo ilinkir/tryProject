@@ -24,7 +24,7 @@ class NewsController extends Controller
             'news' => $data->items(),
             'last_page' => $data->lastPage(),
             'per_page' => $data->perPage(),
-            'has_more_pages' => $data->hasMorePages(),
+//            'has_more_pages' => $data->hasMorePages(),
             'has_pages' => $data->hasPages(),
             'total' => $data->total(),
             'filters' => $aggs,
@@ -39,7 +39,7 @@ class NewsController extends Controller
 
         $data = [
             'news' => $news['documents'] ?? '',
-            'count' => $news['documentsCount'] ?? '',
+            'total' => $news['documentsCount'] ?? '',
             'filters' => $news['aggregations'] ?? '',
         ];
 

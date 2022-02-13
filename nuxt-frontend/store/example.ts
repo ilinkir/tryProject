@@ -1,7 +1,7 @@
 //store.ts
 import { defineStore, acceptHMRUpdate} from 'pinia'
 
-export const useStore = defineStore('storeId', {
+export const useStore = defineStore('example', {
     // arrow function recommended for full type inference
     state: () => {
         return {
@@ -11,18 +11,19 @@ export const useStore = defineStore('storeId', {
             isAdmin: true,
         }
     },
-    actions:{
-        hit(){
-            this.counter++;
-        }
-    },
 
     getters:{
         getCount:(state)=>state.counter,
         getUser: (state)=> {
             state.name
         }
-    }
+    },
+
+    actions:{
+        hit(){
+            this.counter++;
+        }
+    },
 })
 
 if (import.meta.hot) {
