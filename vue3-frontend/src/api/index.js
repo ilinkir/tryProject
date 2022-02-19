@@ -1,7 +1,7 @@
 class Api {
 
     getNews(limit = null, page = null) {
-        return this.get('/api/news', {
+        return this.get('/news', {
             limit,
             page
         })

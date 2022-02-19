@@ -31,7 +31,7 @@ export const useStore = defineStore('news', {
     actions: {
         loadNews: function () {
             return apiClient(api.getNews()).then((res) => {
-                const data = res.data.value;
+                const data = res.data;
 
                 if (!isEmpty(data.news)) {
                     this.news = data.news

@@ -1,5 +1,5 @@
 <template>
-    <NewsList />
+  <NewsList />
 </template>
 
 <script setup>

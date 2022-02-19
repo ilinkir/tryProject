@@ -11,6 +11,12 @@ import './index.css'
 
 const app = createApp(App);
 
+import DefaultLayout from './layouts/defaultLayout.vue'
+import VueLayout from './layouts/vueLayout.vue'
+
+app.component('default-layout', DefaultLayout)
+app.component('vue-layout', VueLayout)
+
 app.use(createPinia());
 app.use(router);
 app.use(VueAxios, axios)
