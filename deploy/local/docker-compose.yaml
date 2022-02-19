@@ -28,19 +28,20 @@ services:
       XDEBUG_IDKEY: DEFKEY
     volumes:
       - ../../laravel-backend:/var/www
-  nuxt-frontend:
-    build:
-      context: ../../nuxt-frontend
-      dockerfile: ./docker/Dockerfile
-    ports:
-      - 24678:24678 #For websocket
-    networks:
-      project:
-        aliases:
-          - nuxt-frontend
-          - frontend
-    volumes:
-      - ../../nuxt-frontend:/var/www
+# wait lts
+#  nuxt-frontend:
+#    build:
+#      context: ../../nuxt-frontend
+#      dockerfile: ./docker/Dockerfile
+#    ports:
+#      - 24678:24678 #For websocket
+#    networks:
+#      project:
+#        aliases:
+#          - nuxt-frontend
+#          - frontend
+#    volumes:
+#      - ../../nuxt-frontend:/var/www
   # PostgreSQL database container
   postgres:
     image: 'postgres'
