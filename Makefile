@@ -13,3 +13,6 @@ prepare-nginx:
 
 prepare-front:
 	docker-compose -f deploy/local/docker-compose.yaml up -d --no-deps --build nuxt-frontend
+
+prepare-back:
+	docker-compose -f deploy/local/docker-compose.yaml up -d --no-deps --build laravel-backend
