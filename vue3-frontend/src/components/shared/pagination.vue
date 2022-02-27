@@ -1,4 +1,3 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div
     class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
@@ -6,7 +5,13 @@
     <div class="flex-1 flex justify-between sm:hidden">
       <a
         href="#"
-        class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+        @click="onClickPreviousPage"
+        :class="[
+          currentPage === 1
+            ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600'
+            : 'hover:bg-gray-50',
+        ]"
+        class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white"
       >
         Previous
       </a>
@@ -38,7 +43,13 @@
         >
           <a
             href="#"
-            class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+            :class="[
+              currentPage === 1
+                ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600'
+                : 'hover:bg-gray-50',
+            ]"
+            @click="onClickPreviousPage"
+            class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500"
           >
             <span class="sr-only">Previous</span>
             <ChevronLeftIcon class="h-5 w-5" aria-hidden="true" />
@@ -53,13 +64,16 @@
               href="#"
               aria-current="page"
               class="relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+              @click="onClickPage(page.name)"
             >
               {{ page.name }}
             </a>
           </template>
           <a
             href="#"
-            class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+            @click="onClickNextPage"
+            :class="[currentPage === lastPage ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600' : 'hover:bg-gray-50']"
+            class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500"
           >
             <span class="sr-only">Next</span>
             <ChevronRightIcon class="h-5 w-5" aria-hidden="true" />
@@ -134,6 +148,16 @@ export default {
       return range;
     },
   },
-  //https://vuejsexamples.com/reusable-pagination-component-with-vue-js/
+  methods: {
+    onClickPreviousPage() {
+      this.$emit("page-changed", this.currentPage - 1);
+    },
+    onClickPage(page) {
+      this.$emit("page-changed", page);
+    },
+    onClickNextPage() {
+      this.$emit("page-changed", this.currentPage + 1);
+    },
+  },
 };
 </script>

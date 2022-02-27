@@ -32,8 +32,8 @@ export const useStore = defineStore("news", {
   },
 
   actions: {
-    loadNews: function () {
-      return apiClient(api.getNews()).then((res) => {
+    loadNews: function (page) {
+      return apiClient(api.getNews(page)).then((res) => {
         const data = res.data;
         if (!isEmpty(data.news)) {
           this.news = data.news;
@@ -60,7 +60,3 @@ export const useStore = defineStore("news", {
     },
   },
 });
-
-// if (import.meta.hot) {
-//     import.meta.hot.accept(acceptHMRUpdate(useStore, import.meta.hot))
-// }

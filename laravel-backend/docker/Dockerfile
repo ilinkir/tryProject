@@ -1,5 +1,5 @@
 FROM ubuntu:focal
-#https://github.com/nginx/unit/issues/625 https://github.com/nginx/unit/issues/515
+#https://github.com/exaco/laravel-octane-dockerfile thx
 RUN set -eu \
     && echo "Europe/Moscow" > /etc/timezone \
     && apt-get -y update \

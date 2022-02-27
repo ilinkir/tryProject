@@ -43,8 +43,6 @@ class NewsRepository extends AbstractRepository
                 'description',
                 'created_at',
                 'is_active',
-                'price',
-                'brand_id',
                 'category_id',
             )
             ->where('code', $code)
