@@ -1,0 +1,43 @@
+2022-03-03 14:22:44,169 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 14:22:44,169 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 14:22:44,169 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 14:22:44,170 INFO supervisord started with pid 1
+2022-03-03 14:22:45,173 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 14:22:45,174 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 14:22:45,198 INFO exited: app-worker_00 (exit status 1; not expected)
+2022-03-03 14:22:45,202 INFO exited: app-worker_01 (exit status 1; not expected)
+2022-03-03 14:22:46,204 INFO spawned: 'app-worker_00' with pid 10
+2022-03-03 14:22:46,205 INFO spawned: 'app-worker_01' with pid 11
+2022-03-03 14:22:46,229 INFO exited: app-worker_00 (exit status 1; not expected)
+2022-03-03 14:22:46,231 INFO exited: app-worker_01 (exit status 1; not expected)
+2022-03-03 14:22:48,234 INFO spawned: 'app-worker_00' with pid 12
+2022-03-03 14:22:48,236 INFO spawned: 'app-worker_01' with pid 13
+2022-03-03 14:22:48,260 INFO exited: app-worker_00 (exit status 1; not expected)
+2022-03-03 14:22:48,262 INFO exited: app-worker_01 (exit status 1; not expected)
+2022-03-03 14:22:51,267 INFO spawned: 'app-worker_00' with pid 14
+2022-03-03 14:22:51,269 INFO spawned: 'app-worker_01' with pid 15
+2022-03-03 14:22:51,294 INFO exited: app-worker_00 (exit status 1; not expected)
+2022-03-03 14:22:51,295 INFO gave up: app-worker_00 entered FATAL state, too many start retries too quickly
+2022-03-03 14:22:51,295 INFO exited: app-worker_01 (exit status 1; not expected)
+2022-03-03 14:22:52,296 INFO gave up: app-worker_01 entered FATAL state, too many start retries too quickly
+2022-03-03 14:47:02,849 WARN received SIGTERM indicating exit request
+2022-03-03 14:47:04,721 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 14:47:04,721 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 14:47:04,721 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 14:47:04,724 INFO supervisord started with pid 1
+2022-03-03 14:47:05,727 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 14:47:05,729 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 14:47:06,973 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 14:47:06,974 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 14:54:04,842 WARN received SIGTERM indicating exit request
+2022-03-03 14:54:04,844 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 14:54:04,859 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 14:54:04,860 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 14:54:05,685 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 14:54:05,685 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 14:54:05,685 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 14:54:05,686 INFO supervisord started with pid 1
+2022-03-03 14:54:06,689 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 14:54:06,690 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 14:54:07,702 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 14:54:07,702 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

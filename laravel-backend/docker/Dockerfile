@@ -8,7 +8,7 @@ RUN set -eu \
        gnupg wget curl software-properties-common vim \
     && add-apt-repository ppa:ondrej/php \
     && apt-get -y update \
-    && apt-get -y install git runit libphp8.1-embed php8.1-dev libc-ares-dev libcurl4-openssl-dev \
+    && apt-get -y install git runit libphp8.1-embed php8.1-dev libc-ares-dev libcurl4-openssl-dev supervisor \
     && curl -sL https://deb.nodesource.com/setup_16.x  | bash - \
     && apt-get install -y nodejs \
     && pecl channel-update pecl.php.net
@@ -38,7 +38,12 @@ ADD ./ /var/www/
 #ADD ./docker/service /etc/service
 ADD ./docker/conf/php /tmp/php
 
-RUN chown -R www-data. /var/www
+COPY ./docker/conf/supervisord.queue.conf /etc/supervisor/conf.d/supervisord.queue.conf
+
+COPY ./docker/start.sh /usr/local/bin/start
+
+RUN chown -R www-data. /var/www \
+    && chmod u+x /usr/local/bin/start
 
 RUN bash -c "if [ "$BUILD_ENV" == "devel" ]; \
     then { \
@@ -71,4 +76,6 @@ RUN php /tmp/composer --install-dir=/usr/bin --filename=composer \
 
 WORKDIR /var/www
 
-CMD php artisan octane:start --server=swoole --host=0.0.0.0 --port=80 --workers=auto --task-workers=auto --max-requests=500 --watch
+CMD ["/usr/local/bin/start"]
+
+#CMD php artisan octane:start --server=swoole --host=0.0.0.0 --port=80 --workers=auto --task-workers=auto --max-requests=500 --watch

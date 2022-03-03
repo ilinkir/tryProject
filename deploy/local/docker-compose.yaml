@@ -13,6 +13,8 @@ services:
 #    volumes:
 #      - ./docker/nginx/ssl:/etc/nginx/ssl #for SSL
   laravel-backend:
+    image: laravel-www
+    container_name: laravel-backend
     build:
       context: ../../laravel-backend
       dockerfile: ./docker/Dockerfile
@@ -26,8 +28,22 @@ services:
       XDEBUG_PORT: 9000
       XDEBUG_HOST: 127.0.0.1
       XDEBUG_IDKEY: DEFKEY
+      CONTAINER_ROLE: app
     volumes:
       - ../../laravel-backend:/var/www
+  queue:
+    image: laravel-www
+    container_name: laravel-queue
+    depends_on:
+      - laravel-backend
+    networks:
+      project:
+        aliases:
+          - laravel-queue
+    volumes:
+      - ../../laravel-backend:/var/www
+    environment:
+      CONTAINER_ROLE: queue
 # wait lts
 #  nuxt-frontend:
 #    build:
