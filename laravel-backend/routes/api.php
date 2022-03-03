@@ -18,6 +18,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::prefix('users')->group(function () {
+    Route::post('/register', [\App\Http\Controllers\Users\RegistrationController::class, 'register']);
+    Route::get('/verify/{token}', [\App\Http\Controllers\Users\RegistrationController::class, 'verify'])->where('token', '.*')->name('register.verify');
+});
+
 Route::prefix('news')->group(function () {
     Route::controller(\App\Http\Controllers\News\NewsController::class)->group(function () {
         Route::get('/', 'index');

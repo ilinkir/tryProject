@@ -6,6 +6,10 @@ class Api {
     });
   }
 
+  filterNews(filter) {
+    return this.get("/news/filter", filter);
+  }
+
   get(path, data = {}, headers = {}, credentials = false) {
     const requestHeaders = headers || {};
 

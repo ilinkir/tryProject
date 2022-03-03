@@ -5,7 +5,7 @@
         class="relative z-10 flex items-baseline justify-between pt-24 pb-6 border-b border-gray-200"
       >
         <h1 class="text-4xl font-extrabold tracking-tight text-gray-900">
-          New Arrivals
+          News
         </h1>
 
         <div class="flex items-center">
@@ -93,9 +93,16 @@
               </li>
             </ul>
 
+            <FilterCheckbox
+              v-model="filterState.categories"
+              title="Категории"
+              :values="filters.categories"
+              @update:modelValue="applyFilter"
+            />
+
             <Disclosure
               as="div"
-              v-for="section in filters"
+              v-for="section in filterss"
               :key="section.id"
               class="border-b border-gray-200 py-6"
               v-slot="{ open }"
@@ -208,7 +215,7 @@
 
               <Disclosure
                 as="div"
-                v-for="section in filters"
+                v-for="section in filterss"
                 :key="section.id"
                 class="border-t border-gray-200 px-4 py-6"
                 v-slot="{ open }"
@@ -278,6 +285,7 @@ import {
   TransitionChild,
   TransitionRoot,
 } from "@headlessui/vue";
+import FilterCheckbox from "@/components/shared/catalog/filters/fields/checkbox.vue";
 import { XIcon } from "@heroicons/vue/outline";
 import {
   ChevronDownIcon,
@@ -286,6 +294,12 @@ import {
   PlusSmIcon,
   ViewGridIcon,
 } from "@heroicons/vue/solid";
+
+import { useStore } from "@/stores/news";
+
+import { storeToRefs } from "pinia";
+
+import { mapActions } from 'pinia'
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -301,7 +315,7 @@ const subCategories = [
   { name: "Hip Bags", href: "#" },
   { name: "Laptop Sleeves", href: "#" },
 ];
-const filters = [
+const filterss = [
   {
     id: "color",
     name: "Color",
@@ -358,16 +372,35 @@ export default {
     PlusSmIcon,
     ViewGridIcon,
     XIcon,
+    FilterCheckbox,
+  },
+  data() {
+    return {
+      filterState: {
+        categories: [],
+      },
+    };
   },
   setup() {
     const mobileFiltersOpen = ref(false);
 
+    const newsStore = useStore();
+
+    const { filters } = storeToRefs(newsStore);
+
     return {
       sortOptions,
       subCategories,
-      filters,
+      filterss,
       mobileFiltersOpen,
+      filters,
     };
+  },
+  methods: {
+    ...mapActions(useStore, ["filterNews"]),
+    applyFilter() {
+      this.filterNews(this.filterState);
+    },
   },
 };
 </script>

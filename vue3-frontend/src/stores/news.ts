@@ -58,5 +58,20 @@ export const useStore = defineStore("news", {
         }
       });
     },
+    filterNews: function (params) {
+      return apiClient(api.filterNews(params)).then((res) => {
+        const data = res.data;
+
+        if (!isEmpty(data.news)) {
+          this.news = data.news;
+        }
+        if (!isEmpty(data.filters)) {
+          this.filters = data.filters;
+        }
+        if (isNumber(data.total)) {
+          this.total = data.total;
+        }
+      });
+    }
   },
 });

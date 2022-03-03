@@ -21,7 +21,12 @@ class ElasticSearchService
     private Client $elasticsearch;
     private News $newsModel;
 
-    private array $filtersMap = ['category_id', 'query', 'year_from', 'year_to'];
+    private array $filtersMap = [
+        'categories' => 'category_id',
+        'query' => 'query',
+        'year_from' => 'year_from' ,
+        'year_to' => 'year_to'
+    ];
     private int $limitAggs = 100;
 
     public function __construct(Client $elasticsearch, News $news)
@@ -66,7 +71,7 @@ class ElasticSearchService
 
     private function prepareFilters(Request $request): array
     {
-        return $request->only($this->filtersMap);
+        return $request->only(array_keys($this->filtersMap));
     }
 
     private function buildFilter(Builder $builder, array $filters): Builder
@@ -82,8 +87,8 @@ class ElasticSearchService
                 case 'query':
                     $builder->addQuery(MultiMatchQuery::create($value, ['title', 'preview_text', 'text'], 'AUTO'));
                     break;
-                default: //brand_id, category_id
-                    $builder->addQuery(TermsQuery::create($key, $value));
+                default: //category_id
+                    $builder->addQuery(TermsQuery::create($this->filtersMap[$key], $value));
                     break;
             }
         }
