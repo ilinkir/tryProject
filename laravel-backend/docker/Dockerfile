@@ -7,8 +7,9 @@ RUN set -eu \
     && apt-get -y install --no-install-recommends \
        gnupg wget curl software-properties-common vim \
     && add-apt-repository ppa:ondrej/php \
+    && add-apt-repository ppa:openswoole/ppa \
     && apt-get -y update \
-    && apt-get -y install git runit libphp8.1-embed php8.1-dev libc-ares-dev libcurl4-openssl-dev supervisor \
+    && apt-get -y install git libphp8.1-embed php8.1-dev libc-ares-dev libcurl4-openssl-dev supervisor \
     && curl -sL https://deb.nodesource.com/setup_16.x  | bash - \
     && apt-get install -y nodejs \
     && pecl channel-update pecl.php.net
@@ -20,9 +21,7 @@ ENV XDEBUG_HOST=127.0.0.1
 ENV XDEBUG_IDKEY=DEFKEY
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends \
-    php8.1-cli php8.1-curl php8.1-fpm php8.1-gd \
-    php8.1-intl php8.1-mbstring \
-    php8.1-pgsql php8.1-xml php8.1-zip php8.1-redis php8.1-opcache php8.1-swoole \
+    php8.1-{cli,curl,fpm,gd,intl,mbstring,pgsql,xml,zip,redis,opcache,openswoole} \
     && bash -c "if [ "$BUILD_ENV" == "devel" ]; then apt-get -y install --no-install-recommends php8.1-xdebug; fi" \
     && rm -rf /var/lib/apt/lists/*
 
@@ -30,7 +29,7 @@ ARG INSTALL_SWOOLE=true
 
 RUN set -eu \
     && if [ ${INSTALL_SWOOLE} = true ]; then \
-      pecl install -D 'enable-openssl="yes" enable-http2="yes" enable-swoole-curl="yes" enable-mysqlnd="yes" enable-cares="yes"' swoole \
+      pecl install -D 'enable-openssl="no" enable-http2="yes" enable-swoole-curl="yes" enable-mysqlnd="no" enable-cares="yes"' openswoole \
       && bash -c "echo 'extension=openswoole' >> $(php -i | grep /.+/php.ini -oE)"; \
     fi
 
@@ -38,7 +37,7 @@ ADD ./ /var/www/
 #ADD ./docker/service /etc/service
 ADD ./docker/conf/php /tmp/php
 
-COPY ./docker/conf/supervisord.queue.conf /etc/supervisor/conf.d/supervisord.queue.conf
+COPY ./docker/conf/ /etc/supervisor/conf.d/
 
 COPY ./docker/start.sh /usr/local/bin/start
 

@@ -5,6 +5,7 @@ namespace App\News\Repositories;
 use App\Models\News;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 
 class NewsRepository extends AbstractRepository
 {
@@ -50,6 +51,22 @@ class NewsRepository extends AbstractRepository
             ->first();
     }
 
+    public function getById(string $id): ?Model
+    {
+        return $this->getModel()
+            ->select(
+                'id',
+                'name',
+                'code',
+                'description',
+                'created_at',
+                'is_active',
+                'category_id',
+            )
+            ->where('id', $id)
+            ->first();
+    }
+
     public function paginate(int $limit): \Illuminate\Contracts\Pagination\LengthAwarePaginator
     {
         return $this->getModel()->query()
@@ -65,6 +82,44 @@ class NewsRepository extends AbstractRepository
     public function bindCategory($products)
     {
         return empty($products) ? $products : $products->load('category');
+    }
+
+    public function create(array $properties): Model
+    {
+        DB::beginTransaction();
+
+        $model = $this->getModel();
+
+        $model->fill($properties);
+        $model->save();
+
+        if (!empty($properties['category'])) {
+            $model->category()->sync($properties['category']);
+        }
+
+        DB::commit();
+
+        return $model;
+    }
+
+    public function update(string $id, array $properties): bool
+    {
+        DB::beginTransaction();
+
+        $model = $this->getById($id);
+
+        if ($model && $success = $model->update($properties)) {
+            if (array_key_exists('category', $properties)) {
+                $model->category->detach();
+                if (!empty($properties['category'])) {
+                    $model->category()->sync($properties['category']);
+                }
+            }
+        }
+
+        DB::commit();
+
+        return $success ?? false;
     }
 
 }

@@ -30,3 +30,7 @@ Route::prefix('news')->group(function () {
         Route::get('/{code}', 'detail');
     });
 });
+
+Route::get('broadcast', function () {
+    broadcast(new App\Events\TestEvent('Hello!!!!'));
+});

@@ -15,7 +15,6 @@ class RegistrationController extends Controller
 {
     public function register(RegisterUserRequest $request)
     {
-//        https://klisl.com/laravel-email-confirmation.html
         RegistrationUsers::dispatch($request->validated());
 
         return 'check your email ' . $request->email;

@@ -31,7 +31,7 @@ services:
       CONTAINER_ROLE: app
     volumes:
       - ../../laravel-backend:/var/www
-  queue:
+  laravel-queue:
     image: laravel-www
     container_name: laravel-queue
     depends_on:
@@ -44,6 +44,21 @@ services:
       - ../../laravel-backend:/var/www
     environment:
       CONTAINER_ROLE: queue
+  laravel-websocket:
+    image: laravel-www
+    container_name: laravel-websocket
+    depends_on:
+      - laravel-backend
+    ports:
+      - 6005:6005
+    networks:
+      project:
+        aliases:
+          - laravel-websocket
+    volumes:
+      - ../../laravel-backend:/var/www
+    environment:
+      CONTAINER_ROLE: websocket
 # wait lts
 #  nuxt-frontend:
 #    build:

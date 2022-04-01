@@ -11,6 +11,9 @@ if [ "$role" = "app" ]; then
 elif [ "$role" = "queue" ]; then
     echo "Running the queue..."
     exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.queue.conf #TODO: Сделать вотчер для restart queue при измении кода в /var/www
+elif [ "$role" = "websocket" ]; then
+    echo "Running the websocket..."
+    exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.websocket.conf
 elif [ "$role" = "scheduler" ]; then
     echo "Scheduler role"
 #        while [ true ]

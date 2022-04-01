@@ -41,3 +41,323 @@
 2022-03-03 14:54:06,690 INFO spawned: 'app-worker_01' with pid 9
 2022-03-03 14:54:07,702 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2022-03-03 14:54:07,702 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 18:52:32,756 WARN received SIGTERM indicating exit request
+2022-03-03 18:52:32,758 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 18:52:32,772 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 18:52:32,773 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 18:52:51,603 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 18:52:51,603 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 18:52:51,603 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 18:52:51,606 INFO supervisord started with pid 1
+2022-03-03 18:52:52,623 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 18:52:52,632 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 18:52:53,795 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 18:52:53,800 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:06:06,901 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:06:06,902 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:06:06,902 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:06:06,905 INFO supervisord started with pid 1
+2022-03-03 19:06:07,907 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 19:06:07,909 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 19:06:08,920 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:06:08,920 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:09:54,135 WARN received SIGTERM indicating exit request
+2022-03-03 19:09:54,135 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 19:09:54,153 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 19:09:54,153 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 19:14:14,943 WARN received SIGTERM indicating exit request
+2022-03-03 19:14:14,965 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 19:14:14,989 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 19:14:14,990 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 19:14:15,722 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:14:15,722 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:14:15,722 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:14:15,725 INFO supervisord started with pid 1
+2022-03-03 19:14:16,728 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 19:14:16,730 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 19:14:17,740 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:14:17,740 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:14:19,112 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:14:19,112 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:14:19,112 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:14:19,113 INFO supervisord started with pid 1
+2022-03-03 19:14:20,115 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 19:14:20,116 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 19:14:21,127 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:14:21,127 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:17:02,282 WARN received SIGTERM indicating exit request
+2022-03-03 19:17:02,282 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 19:17:02,294 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 19:17:02,906 WARN received SIGTERM indicating exit request
+2022-03-03 19:17:02,906 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 19:17:02,918 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 19:17:02,918 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 19:17:03,297 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 19:17:03,820 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:17:03,820 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:17:03,822 INFO supervisord started with pid 1
+2022-03-03 19:17:04,168 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:17:04,168 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:17:04,168 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:17:04,169 INFO supervisord started with pid 1
+2022-03-03 19:17:04,825 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-03 19:17:05,171 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 19:17:05,172 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 19:17:06,039 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:17:06,184 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:17:06,184 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:25:57,716 WARN received SIGTERM indicating exit request
+2022-03-03 19:25:57,716 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 19:25:58,302 WARN received SIGTERM indicating exit request
+2022-03-03 19:25:58,302 INFO waiting for app-websoket_00 to die
+2022-03-03 19:25:58,307 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-03 19:26:00,726 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 19:26:00,727 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 19:26:01,735 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 19:26:17,466 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:26:17,466 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:26:17,466 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:26:17,469 INFO supervisord started with pid 1
+2022-03-03 19:26:17,475 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:26:17,475 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:26:17,477 INFO supervisord started with pid 1
+2022-03-03 19:26:18,473 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 19:26:18,478 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 19:26:18,480 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-03 19:26:19,517 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:26:19,531 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:26:19,534 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:42:31,329 WARN received SIGTERM indicating exit request
+2022-03-03 19:42:31,337 INFO waiting for app-websoket_00 to die
+2022-03-03 19:42:31,346 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-03 19:42:31,705 WARN received SIGTERM indicating exit request
+2022-03-03 19:42:31,713 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 19:42:31,746 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 19:42:31,753 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 19:42:35,398 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:42:35,398 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:42:35,401 INFO supervisord started with pid 1
+2022-03-03 19:42:35,670 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:42:35,670 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:42:35,670 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:42:35,672 INFO supervisord started with pid 1
+2022-03-03 19:42:36,403 INFO spawned: 'app-websoket_00' with pid 9
+2022-03-03 19:42:36,675 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 19:42:36,676 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 19:42:37,612 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:42:37,689 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:42:37,689 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:47:55,787 WARN received SIGTERM indicating exit request
+2022-03-03 19:47:55,787 WARN received SIGTERM indicating exit request
+2022-03-03 19:47:55,789 INFO waiting for app-websoket_00 to die
+2022-03-03 19:47:55,789 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 19:47:55,811 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 19:47:56,795 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-03 19:47:56,820 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 19:47:58,812 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:47:58,812 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:47:58,813 INFO supervisord started with pid 1
+2022-03-03 19:47:58,827 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 19:47:58,827 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:47:58,827 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 19:47:58,829 INFO supervisord started with pid 1
+2022-03-03 19:47:59,816 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-03 19:47:59,832 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 19:47:59,833 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 19:48:00,846 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:48:00,846 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 19:48:01,039 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 20:08:30,295 WARN received SIGTERM indicating exit request
+2022-03-03 20:08:30,297 INFO waiting for app-websoket_00 to die
+2022-03-03 20:08:30,302 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-03 20:08:30,939 WARN received SIGTERM indicating exit request
+2022-03-03 20:08:30,939 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 20:08:30,956 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 20:08:31,958 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 20:08:56,953 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 20:08:56,953 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 20:08:56,953 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 20:08:56,954 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 20:08:56,954 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 20:08:56,955 INFO supervisord started with pid 1
+2022-03-03 20:08:56,955 INFO supervisord started with pid 1
+2022-03-03 20:08:57,958 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-03 20:08:57,958 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 20:08:57,960 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 20:08:58,968 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 20:08:58,971 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 20:08:58,971 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 20:14:08,936 WARN received SIGTERM indicating exit request
+2022-03-03 20:14:08,944 INFO waiting for app-websoket_00 to die
+2022-03-03 20:14:08,950 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-03 20:14:15,046 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 20:14:15,047 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 20:14:15,050 INFO supervisord started with pid 1
+2022-03-03 20:14:16,052 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-03 20:14:17,476 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 20:15:48,084 WARN received SIGTERM indicating exit request
+2022-03-03 20:15:48,094 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 20:15:48,106 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 20:15:48,107 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 20:15:51,253 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 20:15:51,254 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 20:15:51,254 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 20:15:51,256 INFO supervisord started with pid 1
+2022-03-03 20:15:52,258 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 20:15:52,260 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 20:15:53,285 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 20:15:53,285 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 20:17:21,766 WARN received SIGTERM indicating exit request
+2022-03-03 20:17:21,767 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-03 20:17:21,799 INFO stopped: app-worker_01 (exit status 0)
+2022-03-03 20:17:22,801 INFO stopped: app-worker_00 (exit status 0)
+2022-03-03 20:20:00,430 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-03 20:20:00,430 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 20:20:00,430 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-03 20:20:00,432 INFO supervisord started with pid 1
+2022-03-03 20:20:01,434 INFO spawned: 'app-worker_00' with pid 8
+2022-03-03 20:20:01,436 INFO spawned: 'app-worker_01' with pid 9
+2022-03-03 20:20:02,449 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-03 20:20:02,449 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 01:38:01,320 WARN received SIGTERM indicating exit request
+2022-03-04 01:38:01,344 INFO waiting for app-websoket_00 to die
+2022-03-04 01:38:01,352 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-04 01:38:01,490 WARN received SIGTERM indicating exit request
+2022-03-04 01:38:01,503 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-04 01:38:01,931 INFO stopped: app-worker_00 (exit status 0)
+2022-03-04 01:38:01,932 INFO stopped: app-worker_01 (exit status 0)
+2022-03-04 01:40:48,160 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-04 01:40:48,160 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-04 01:40:48,160 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-04 01:40:48,163 INFO supervisord started with pid 1
+2022-03-04 01:40:48,166 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-04 01:40:48,166 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-04 01:40:48,168 INFO supervisord started with pid 1
+2022-03-04 01:40:54,132 INFO spawned: 'app-websoket_00' with pid 10
+2022-03-04 01:40:54,132 INFO spawned: 'app-worker_00' with pid 9
+2022-03-04 01:40:54,337 INFO spawned: 'app-worker_01' with pid 10
+2022-03-04 01:40:54,996 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 01:40:54,996 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 01:40:56,253 INFO success: app-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 02:21:53,231 WARN received SIGTERM indicating exit request
+2022-03-04 02:21:53,744 WARN received SIGTERM indicating exit request
+2022-03-04 02:21:54,778 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-04 02:21:54,780 INFO waiting for app-websoket_00 to die
+2022-03-04 02:21:54,808 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-04 02:21:57,788 INFO waiting for app-worker_00, app-worker_01 to die
+2022-03-04 02:21:57,895 INFO stopped: app-worker_00 (exit status 0)
+2022-03-04 02:21:57,896 INFO stopped: app-worker_01 (exit status 0)
+2022-03-04 22:39:23,328 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-04 22:39:23,329 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-04 22:39:23,329 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-04 22:39:23,329 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-04 22:39:23,331 INFO supervisord started with pid 1
+2022-03-04 22:39:23,331 INFO supervisord started with pid 1
+2022-03-04 22:39:24,336 INFO spawned: 'app-worker_00' with pid 8
+2022-03-04 22:39:24,340 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-04 22:39:25,357 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 22:39:26,183 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:06,712 WARN received SIGTERM indicating exit request
+2022-03-04 23:36:06,841 INFO waiting for app-websoket_00 to die
+2022-03-04 23:36:06,849 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-04 23:36:11,341 INFO exited: app-worker_00 (exit status 0; expected)
+2022-03-04 23:36:12,358 INFO spawned: 'app-worker_00' with pid 18
+2022-03-04 23:36:13,749 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:16,763 INFO exited: app-worker_00 (exit status 0; expected)
+2022-03-04 23:36:17,824 INFO spawned: 'app-worker_00' with pid 25
+2022-03-04 23:36:19,060 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:22,069 INFO exited: app-worker_00 (exit status 0; expected)
+2022-03-04 23:36:23,073 INFO spawned: 'app-worker_00' with pid 32
+2022-03-04 23:36:24,289 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:27,302 INFO exited: app-worker_00 (exit status 0; expected)
+2022-03-04 23:36:28,305 INFO spawned: 'app-worker_00' with pid 39
+2022-03-04 23:36:29,533 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:32,543 INFO exited: app-worker_00 (exit status 0; expected)
+2022-03-04 23:36:33,546 INFO spawned: 'app-worker_00' with pid 46
+2022-03-04 23:36:34,763 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:37,777 INFO exited: app-worker_00 (exit status 0; expected)
+2022-03-04 23:36:38,780 INFO spawned: 'app-worker_00' with pid 53
+2022-03-04 23:36:39,986 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:42,999 INFO exited: app-worker_00 (exit status 0; expected)
+2022-03-04 23:36:44,001 INFO spawned: 'app-worker_00' with pid 60
+2022-03-04 23:36:45,216 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:48,229 INFO exited: app-worker_00 (exit status 0; expected)
+2022-03-04 23:36:49,232 INFO spawned: 'app-worker_00' with pid 67
+2022-03-04 23:36:50,455 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-04 23:36:52,458 WARN received SIGTERM indicating exit request
+2022-03-04 23:36:52,460 INFO waiting for app-worker_00 to die
+2022-03-04 23:36:52,471 INFO stopped: app-worker_00 (exit status 0)
+2022-03-08 21:54:01,800 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-08 21:54:01,801 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-08 21:54:01,804 INFO supervisord started with pid 1
+2022-03-08 21:54:02,807 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-08 21:54:04,194 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-08 21:55:25,569 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-08 21:55:25,569 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-08 21:55:25,572 INFO supervisord started with pid 1
+2022-03-08 21:55:26,575 INFO spawned: 'app-worker_00' with pid 8
+2022-03-08 21:55:27,624 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-08 22:15:50,865 WARN received SIGTERM indicating exit request
+2022-03-08 22:15:50,875 INFO waiting for app-worker_00 to die
+2022-03-08 22:15:50,893 INFO stopped: app-worker_00 (exit status 0)
+2022-03-08 22:15:51,523 WARN received SIGTERM indicating exit request
+2022-03-08 22:15:51,527 INFO waiting for app-websoket_00 to die
+2022-03-08 22:15:51,529 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-23 00:57:10,030 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-23 00:57:10,031 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-23 00:57:10,031 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-23 00:57:10,031 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-23 00:57:10,034 INFO supervisord started with pid 1
+2022-03-23 00:57:10,034 INFO supervisord started with pid 1
+2022-03-23 00:57:11,037 INFO spawned: 'app-worker_00' with pid 8
+2022-03-23 00:57:11,037 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-23 00:57:12,049 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-23 00:57:12,271 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-23 01:05:42,552 WARN received SIGTERM indicating exit request
+2022-03-23 01:05:42,558 INFO waiting for app-worker_00 to die
+2022-03-23 01:05:42,689 INFO stopped: app-worker_00 (exit status 0)
+2022-03-23 01:05:42,818 WARN received SIGTERM indicating exit request
+2022-03-23 01:05:42,823 INFO waiting for app-websoket_00 to die
+2022-03-23 01:05:42,827 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-27 23:25:43,669 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-27 23:25:43,669 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-27 23:25:43,670 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-27 23:25:43,670 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-27 23:25:43,673 INFO supervisord started with pid 1
+2022-03-27 23:25:43,673 INFO supervisord started with pid 1
+2022-03-27 23:25:44,676 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-27 23:25:44,676 INFO spawned: 'app-worker_00' with pid 8
+2022-03-27 23:25:45,687 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-27 23:25:45,688 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-28 00:33:24,797 WARN received SIGTERM indicating exit request
+2022-03-28 00:33:24,814 INFO waiting for app-worker_00 to die
+2022-03-28 00:33:24,828 WARN received SIGTERM indicating exit request
+2022-03-28 00:33:24,840 INFO waiting for app-websoket_00 to die
+2022-03-28 00:33:24,845 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-03-28 00:33:24,900 INFO stopped: app-worker_00 (exit status 0)
+2022-03-30 22:51:59,374 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-30 22:51:59,374 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-30 22:51:59,374 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-03-30 22:51:59,374 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-03-30 22:51:59,377 INFO supervisord started with pid 1
+2022-03-30 22:51:59,377 INFO supervisord started with pid 1
+2022-03-30 22:52:00,379 INFO spawned: 'app-websoket_00' with pid 8
+2022-03-30 22:52:00,379 INFO spawned: 'app-worker_00' with pid 8
+2022-03-30 22:52:01,391 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-30 22:52:01,657 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-03-30 23:53:55,098 WARN received SIGTERM indicating exit request
+2022-03-30 23:53:55,119 INFO waiting for app-worker_00 to die
+2022-03-30 23:53:55,165 INFO stopped: app-worker_00 (exit status 0)
+2022-03-30 23:53:55,367 WARN received SIGTERM indicating exit request
+2022-03-30 23:53:55,373 INFO waiting for app-websoket_00 to die
+2022-03-30 23:53:55,377 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-04-01 21:49:34,074 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-01 21:49:34,074 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-01 21:49:34,074 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-04-01 21:49:34,074 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-04-01 21:49:34,077 INFO supervisord started with pid 1
+2022-04-01 21:49:34,077 INFO supervisord started with pid 1
+2022-04-01 21:49:35,079 INFO spawned: 'app-worker_00' with pid 8
+2022-04-01 21:49:35,079 INFO spawned: 'app-websoket_00' with pid 9
+2022-04-01 21:49:36,093 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-01 21:49:36,367 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
