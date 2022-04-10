@@ -3,17 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Repositories\User\UsersRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
 class TestController extends Controller
 {
-    public function index()
+    public function index(UsersRepository $usersRepository)
     {
-//        User::create([
-//            'name' => 'test',
-//            'password' => '123',
-//            'email' => 'test@test.ru',
-//        ]);
+        dd($usersRepository->findAllForNotificationNews());
     }
 }

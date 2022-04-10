@@ -14,14 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/test', [\App\Http\Controllers\TestController::class, 'index']);
+
+Route::middleware('auth:sanctum')->get('/user', function () {
+    return \Illuminate\Support\Facades\Auth::user();
 });
 
-Route::prefix('users')->group(function () {
-    Route::post('/register', [\App\Http\Controllers\Users\RegistrationController::class, 'register']);
-    Route::get('/verify/{token}', [\App\Http\Controllers\Users\RegistrationController::class, 'verify'])->where('token', '.*')->name('register.verify');
+Route::prefix('sanctum')->group(function() {
+    Route::controller(\App\Http\Controllers\Users\AuthController::class)->group(function () {
+        Route::post('/register', 'register');
+        Route::post('/token', 'token');
+    });
 });
+
+Route::prefix('user')->middleware('auth:sanctum')->group(function () {
+    Route::get('/cars', [\App\Http\Controllers\Users\CarsController::class, 'getOwnCars']);
+});
+
+//Route::prefix('users')->group(function () {
+//    Route::post('/register', [\App\Http\Controllers\Users\RegistrationController::class, 'register']);
+//    Route::get('/verify/{token}', [\App\Http\Controllers\Users\RegistrationController::class, 'verify'])->where('token', '.*')->name('register.verify');
+//});
 
 Route::prefix('news')->group(function () {
     Route::controller(\App\Http\Controllers\News\NewsController::class)->group(function () {

@@ -14,14 +14,38 @@ class NewsTest extends TestCase
      *
      * @return void
      */ // Написать тест на получение новостей, добавление с авторизацией, только определенные пользаки могут... , изучить моки, стабы
-    public function testResponseListNews()
+    public function testResponseListNewsReturnsDataInValidFormat()
     {
-        $response = $this->get('/api/news');
+        $response = $this->json('get','/api/news');
 
         $response
             ->assertStatus(Response::HTTP_OK)
             ->assertJsonStructure([
-                'news' => '*'
+                'news' => [
+                    '*' => [
+                        'id',
+                        'title',
+                        'code',
+                        'preview_text',
+                        'text',
+                        'image_id',
+                        'category_id',
+                        'is_active',
+                        'sort',
+                        'created_at',
+                        'updated_at',
+                    ],
+                ],
+                'last_page',
+                'per_page',
+                'current_page',
+                'has_more_pages',
+                'has_pages',
+                'total',
+                'filters' => [
+                    'year' => [],
+                    'categories',
+                ],
             ]);
     }
 }

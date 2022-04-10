@@ -35,6 +35,15 @@ class News extends Model
         'created_at' => 'date:M j, Y, g:i a',
     ]; //Конвертация значений, особенно удобно если нужно хранить данные в json формате, то в sql нужно создать поле text и класть туда просто массив невозможно и будет ошибка, для этого просто добавить поле и array, напр - 'options' => 'array'
 
+    /**
+     * The event map for the model.
+     *
+     * @var array
+     */
+//    protected $dispatchesEvents = [
+//        'updated' => News\NewsUpdated::class,
+//    ];
+
     public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Category::class);
