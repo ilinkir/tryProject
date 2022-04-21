@@ -426,3 +426,41 @@
 2022-04-10 14:51:26,814 INFO spawned: 'app-websoket_00' with pid 8
 2022-04-10 14:51:27,828 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2022-04-10 14:51:28,101 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-10 23:17:45,000 WARN received SIGTERM indicating exit request
+2022-04-10 23:17:45,142 WARN received SIGTERM indicating exit request
+2022-04-10 23:17:45,203 INFO waiting for app-worker_00 to die
+2022-04-10 23:17:45,210 INFO waiting for app-websoket_00 to die
+2022-04-10 23:17:45,227 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-04-10 23:17:48,204 INFO stopped: app-worker_00 (exit status 0)
+2022-04-16 21:54:50,691 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-16 21:54:50,691 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-04-16 21:54:50,692 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-16 21:54:50,692 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-04-16 21:54:50,695 INFO supervisord started with pid 1
+2022-04-16 21:54:50,695 INFO supervisord started with pid 1
+2022-04-16 21:54:51,701 INFO spawned: 'app-websoket_00' with pid 8
+2022-04-16 21:54:51,708 INFO spawned: 'app-worker_00' with pid 8
+2022-04-16 21:54:52,762 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-16 21:54:53,428 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-16 22:42:26,676 WARN received SIGTERM indicating exit request
+2022-04-16 22:42:26,686 INFO waiting for app-worker_00 to die
+2022-04-16 22:42:26,697 INFO stopped: app-worker_00 (exit status 0)
+2022-04-16 22:42:27,338 WARN received SIGTERM indicating exit request
+2022-04-16 22:42:27,341 INFO waiting for app-websoket_00 to die
+2022-04-16 22:42:27,346 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-04-16 22:42:43,991 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-16 22:42:43,991 WARN For [program:app-websoket], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-04-16 22:42:43,995 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2022-04-16 22:42:43,995 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-04-16 22:42:43,996 INFO supervisord started with pid 1
+2022-04-16 22:42:43,998 INFO supervisord started with pid 1
+2022-04-16 22:42:45,000 INFO spawned: 'app-websoket_00' with pid 8
+2022-04-16 22:42:45,002 INFO spawned: 'app-worker_00' with pid 8
+2022-04-16 22:42:46,023 INFO success: app-websoket_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-16 22:42:46,047 INFO success: app-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-16 22:56:19,898 WARN received SIGTERM indicating exit request
+2022-04-16 22:56:19,898 WARN received SIGTERM indicating exit request
+2022-04-16 22:56:20,050 INFO waiting for app-websoket_00 to die
+2022-04-16 22:56:20,050 INFO waiting for app-worker_00 to die
+2022-04-16 22:56:20,055 INFO stopped: app-websoket_00 (terminated by SIGTERM)
+2022-04-16 22:56:21,997 INFO stopped: app-worker_00 (exit status 0)

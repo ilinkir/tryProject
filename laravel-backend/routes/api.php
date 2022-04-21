@@ -47,3 +47,5 @@ Route::prefix('news')->group(function () {
 Route::get('broadcast', function () {
     broadcast(new App\Events\TestEvent('Hello!!!!'));
 });
+
+Route::middleware('auth:sanctum')->post('import', [\App\Http\Controllers\Csv\ImportController::class, 'importProcess']);
